@@ -2,8 +2,8 @@ pipeline {
     agent any
     stages {
         stage('pre-requisites-install') {
-            dir ('./jenkins/scripts/') { 
-            sh('pre-install.sh')
+            steps {
+                sh './scripts/pre-install.sh'
             }
         }
         stage('Build') {
@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh './scripts/deliver.sh'
             }
         }
     }
