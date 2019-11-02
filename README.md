@@ -2,8 +2,6 @@
 This is a sample ci cd pipeline code for a java based application
 
 
-https://github.com/AVM-Consulting/CI-CD-with-Dockers-and-Jenkins
-https://www.youtube.com/watch?v=nMLQgXf8tZ0
 Add following rules in aws security group:
 
 HTTP/8081/101.127.5.208/32
