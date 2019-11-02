@@ -22,4 +22,5 @@ code_repo/.mvnw
 	Profile(s): 	[dev, swagger]
 ----------------------------------------------------------
 
-
+High level architecture:
+![Image description](./images/CI.png)
