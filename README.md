@@ -24,17 +24,17 @@ code_repo/.mvnw
 
 High level architecture:
 
-##Continuous integration/Deployment sketch (thought process)
+## Continuous integration/Deployment sketch (thought process)
 
 ![Image description](./images/cicd-sketch.jpg)
 
 
-##Continuous integration
+## Continuous integration
 
 ![Image description](./images/CI.png)
 
 
-##Continuous Deployment
+## Continuous Deployment
 
 ![Image description](./images/CD.png)
 
