@@ -2,8 +2,8 @@ pipeline {
     agent any
     stages {
         stage('pre-requisites-install') {
-            steps {
-                sh './jenkins/scripts/pre-install.sh'
+            dir ('./jenkins/scripts/') { 
+            sh('pre-install.sh')
             }
         }
         stage('Build') {
