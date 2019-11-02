@@ -1,6 +1,7 @@
 # ci-cd-pipeline
 This is a sample ci cd pipeline code for a java based application
 
+Jenkins URL: http://3.80.248.206:8080/
 
 Add following rules in aws security group:
 
