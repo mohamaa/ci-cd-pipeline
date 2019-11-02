@@ -13,7 +13,7 @@ sudo usermod -a -G docker ec2-user
 # Just to be safe removing previously available java if present
 sudo yum remove -y java
 
-sudo yum install java
+sudo yum install -q -y java > /dev/null 2>&1
 sleep 10
 
 sudo -H pip install awscli bcrypt
