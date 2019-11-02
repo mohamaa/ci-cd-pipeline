@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'build' }
+    agent any
     stages {
         stage('pre-requisites-install') {
             steps {
