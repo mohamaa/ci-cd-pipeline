@@ -1,0 +1,17 @@
+{
+    "profile":  "N2O-S-UE1",
+    "region": "us-east-1",
+    "vpc_id": "vpc-4c864d36",
+	"subnet_id": "subnet-7b863d27",
+	"source_ami":  "ami-69231b16",
+	"instance_type": "t2.medium",
+	"iam_instance_profile": "PPNSADM",
+	"security_group_ids" : "sg-05a7f272c27c0959d,sg-82ecfac8c",
+	"environment": "stage",
+	"family": "n2ouse1",
+	"moniker": "N2O-S-UE1",
+	"product": "n2o",
+	"role": "ami",
+	"service": "STAGE-N2O",
+	"owner": "cloud.ops.paas.singapore@autodesk.com"
+}

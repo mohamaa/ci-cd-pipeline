@@ -1,0 +1,68 @@
+{
+    "builders": [{
+        "type": "amazon-ebs",
+		"profile": "N2O-S-UE1",
+		"ami_regions": [
+	      "us-east-1"
+	    ],
+        "region": "us-east-1", 
+        "ena_support": "true",
+        "iam_instance_profile" : "{{user `iam_instance_profile`}}",
+        "instance_type": "t2.medium", 
+        "ami_name": "jenkins_master_ami_{{isotime \"2006-01-02\"}}_{{timestamp}}",
+		"ami_description": "jenkins_master_slave_ami_{{isotime \"2006-01-02\"}}_{{timestamp}}",
+		"source_ami_filter": {
+		      "filters": {
+		        "name": "amzn2-ami-hvm-2.0*x86_64*",
+		        "root-device-type": "ebs",
+		        "virtualization-type": "hvm"
+		      },
+		      "most_recent": true,
+		      "owners": [
+		        "amazon"
+		      ]
+		    },
+	    "sriov_support": "true",
+	    "ssh_username": "ec2-user",
+	    "tags": {
+	      "Name": "jenkins_master_slave_ami_{{isotime \"2006-01-02\"}}_{{timestamp}}"
+	    },
+		"shutdown_behavior":"stop",
+		"run_tags": {
+		"Role": "ami",
+        "environment": "stage",
+		"family": "{{user `family`}}",
+		"adsk:moniker": "N2O-S-UE1",
+		"product": "{{user `product`}}",
+		"role": "{{user `role`}}",
+		"service": "{{user `service`}}",
+		"owner": "{{user `owner`}}"
+		},
+		"tags": {
+		"Role": "{{user `Role`}}",
+        "adsk:environment": "{{user `adsk:environment`}}",
+		"adsk:family": "{{user `adsk:family`}}",
+		"adsk:moniker": "{{user `adsk:moniker`}}",
+		"adsk:product": "{{user `adsk:product`}}",
+		"adsk:role": "{{user `adsk:role`}}",
+		"adsk:service": "{{user `adsk:service`}}",
+		"owner": "{{user `owner`}}"
+		}
+    }],
+	"provisioners": [
+		{
+		"script": "{{pwd}}/jenkins_master_slave.bash",
+		"type": "shell"
+		}
+	],
+	"post-processors": [
+		{
+			"inline": [
+			"echo AMI Name is jenkins_master_slave_ami_{{isotime \"2006-01-02\"}}_{{timestamp}}",
+			"date",
+			"exit 0"
+			],
+			"type": "shell-local"
+			}
+	]
+}
