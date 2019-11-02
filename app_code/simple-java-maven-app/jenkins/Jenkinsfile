@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('pre-requisites-install') {
+            steps {
+                sh './jenkins/scripts/pre-install.sh'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
