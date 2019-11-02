@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('pre-requisites-install') {
             steps {
-                sh './scripts/pre-install.sh'
+                sh '/var/lib/jenkins/workspace/simple-java-maven-app/app_code/simple-java-maven-app/jenkins/scripts/pre-install.sh'
             }
         }
         stage('Build') {
