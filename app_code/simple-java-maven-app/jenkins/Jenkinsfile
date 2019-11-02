@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'cd app_code/simple-java-maven-app;mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'cd app_code/simple-java-maven-app;mvn test'
             }
             post {
                 always {
