@@ -16,13 +16,6 @@ sudo yum install docker
 systemctl enable docker
 sudo usermod -a -G docker $USER
 
-code_repo/.mvnw
-----------------------------------------------------------
-	Application 'UMSL' is running! Access URLs:
-	Local: 		http://localhost:8081/services/UMSL
-	External: 	http://172.31.34.233:8081/services/UMSL
-	Profile(s): 	[dev, swagger]
-----------------------------------------------------------
 
 High level architecture:
 
