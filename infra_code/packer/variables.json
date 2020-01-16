@@ -1,5 +1,5 @@
 {
-    "profile":  "N2O-S-UE1",
+    "profile":  "yourprofile",
     "region": "us-east-1",
     "vpc_id": "vpc-4c864d36",
 	"subnet_id": "subnet-7b863d27",
